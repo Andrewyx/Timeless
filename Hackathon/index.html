@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        
+        
+        <title class="website-title">HACKATHON</title>
+        <style>
+            body {
+                background-color: #f1f1f1;
+                font-family: Arial, sans-serif;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+            }
+            main {
+                margin: 20px;
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box {
+                flex: 1;
+                margin: 10px;
+                background-color: #fff;
+                padding: 20px;
+            }
+            .website-title {
+                /* text styling */
+                 font-size: 30px;
+                /* transition effect */
+                transition: all 0.3s ease;
+            }
+            .website-title:hover {
+                /* hover styling */
+                transform: scale(0.5.1);
+                text-shadow: 0 0 10px yellow;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header id="app">
+            <h1 class="website-title">Timeless</h1>
+            
+        </header>
+        <main>
+            <div class="container">
+                <div class="box">
+                  <!-- Content for the first box -->
+                </div>
+                <div class="box">
+                  <!-- Content for the second box -->
+                </div>
+                <div class="box">
+                  <!-- Content for the third box -->
+                </div>
+              </div>
+        </main>
+        <script>
+            const { createApp } = Vue
+            createApp({
+                data() {
+                    return {
+                    }
+                }
+            }).mount('#app')
+            </script>
+           
+           
+    </body>
+</html>

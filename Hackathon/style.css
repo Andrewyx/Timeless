@@ -1,0 +1,16 @@
+.website-title {
+    /* text styling */
+    font-size: 30px;
+    /* transition effect */
+    transition: all 0.3s ease;
+}
+.website-title:hover {
+    /* hover styling */
+    transform: scale(1.1);
+    text-shadow: 0 0 10px yellow;
+}
+
+
+    
+    
+    
