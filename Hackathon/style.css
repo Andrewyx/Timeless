@@ -51,7 +51,7 @@ body{
 .buttons button{
     
     width: 110px;
-    height: 19px;
+    height: 42px;
     background-color: hsl(208, 64%, 35%);
     color: #ffffff;
     border: none;
@@ -84,4 +84,31 @@ body{
     justify-content: space-around;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0,139,253,0.25);
+}
+
+
+.increment-button {
+  /* Styling for the button */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 20px; /* Padding inside the button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 16px; /* Increase font size */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+/* Change button color on hover */
+.increment-button:hover {
+  background-color: #3e8e41;
+}
+/* Styling for the score display */
+.score-display {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
