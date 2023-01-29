@@ -6,6 +6,9 @@ let timerStarted = false;
 document.getElementById('startTimer').addEventListener('click', ()=>{
     if(int!==null){
         clearInterval(int);
+        var music = document.getElementById("music");
+
+        music.play(); //start playing the music 
         
     }
     score = 0;
@@ -15,7 +18,10 @@ document.getElementById('startTimer').addEventListener('click', ()=>{
 });
 
 document.getElementById('resetTimer').addEventListener('click', ()=>{
+    var music = document.getElementById("music");
+        music.pause();
     clearInterval(int);
+    
     score = 0;
     document.getElementById("score").innerHTML = "Score: " + score;    
     [milliseconds,seconds,minutes,hours] = [0,10,0,0];
@@ -59,16 +65,6 @@ function displayTimer(){
 }
 
 
-window.onload = () => {
-    document.querySelectorAll("button.particleButton").forEach(btn => {
-        let btnBg = btn.parentNode.querySelector(".particles")
-        let initalListener = () => {
-            btnBg.classList.add("animated")
-            btn.removeEventListener("click", initalListener)
-        }
-        btn.addEventListener("click", initalListener)
-    })
-}
 var score = 0;
             document.getElementById("score").innerHTML = "Score: " + score;
 
@@ -87,13 +83,5 @@ var score = 0;
                 }
             }
 
-            window.onload = () => {
-                document.querySelectorAll("button.particleButton").forEach(btn => {
-                    let btnBg = btn.parentNode.querySelector(".particles")
-                    let initalListener = () => {
-                        btnBg.classList.add("animated")
-                        btn.removeEventListener("click", initalListener)
-                    }
-                    btn.addEventListener("click", initalListener)
-                })
-            }
+      
+  
