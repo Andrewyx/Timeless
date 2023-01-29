@@ -3,24 +3,29 @@ let timerRef = document.querySelector('#timerDisplay');
 let int = null;
 let timerStarted = false;
 
-
 document.getElementById('startTimer').addEventListener('click', ()=>{
     if(int!==null){
         clearInterval(int);
     }
-    score = 0;
-    document.getElementById("score").innerHTML = "Score: " + score;
     int = setInterval(displayTimer,10);
     timerStarted = true;
-}); 
+});
 
 document.getElementById('resetTimer').addEventListener('click', ()=>{
     clearInterval(int);
-    score = 0;
-    document.getElementById("score").innerHTML = "Score: " + score;
     [milliseconds,seconds,minutes,hours] = [0,10,0,0];
     timerRef.innerHTML = '00 : 10 : 00 : 000 ';
+    score = 0;
+  
+    
 });
+class Assignment {
+    constructor(displayname, duration){
+    this.displayname = displayname;
+    this.duration = duration;
+    }
+}
+
 
 function displayTimer(){
     milliseconds-=10;
@@ -49,32 +54,14 @@ function displayTimer(){
 }
 
 
+window.onload = () => {
+    document.querySelectorAll("button.particleButton").forEach(btn => {
+        let btnBg = btn.parentNode.querySelector(".particles")
+        let initalListener = () => {
+            btnBg.classList.add("animated")
+            btn.removeEventListener("click", initalListener)
+        }
+        btn.addEventListener("click", initalListener)
+    })
+}
 
-var score = 0;
-            document.getElementById("score").innerHTML = "Score: " + score;
-
-            function increment() {
-                if (hours == 0 && minutes == 0 && seconds == 0 && milliseconds == 0) {
-                    alert("Time's up, you cannot increase the score anymore.");
-                    if(score >= 150) {
-                        alert("CONGRATS YOUR COOL");
-                    } else {
-                        alert("get gud you failed");
-                    }
-                    
-                } else {
-                    score++;
-                    document.getElementById("score").innerHTML = "Score: " + score;
-                }
-            }
-
-            window.onload = () => {
-                document.querySelectorAll("button.particleButton").forEach(btn => {
-                    let btnBg = btn.parentNode.querySelector(".particles")
-                    let initalListener = () => {
-                        btnBg.classList.add("animated")
-                        btn.removeEventListener("click", initalListener)
-                    }
-                    btn.addEventListener("click", initalListener)
-                })
-            }
