@@ -2,48 +2,59 @@
 <html> 
     <head>
         
+        <title class="website-title">Timeless</title>
         
-        <title class="website-title">HACKATHON</title>
+        <link rel="stylesheet" href="style.css">
+        
         <style>
+            /* General styling */
             body {
-                background-color: #f1f1f1;
                 font-family: Arial, sans-serif;
+                
             }
             header {
                 background-color: #333;
-                color: #fff;
+                color: rgb(255, 255, 255);
                 padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
             main {
                 margin: 20px;
             }
+            /* Container for the boxes */
             .container {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
             }
-            .box {
-                flex: 1;
-                margin: 10px;
-                background-color: #fff;
-                padding: 20px;
-            }
+            /* Box styling */
+           
+            /* Title styling */
             .website-title {
-                /* text styling */
-                 font-size: 30px;
-                /* transition effect */
+                font-size: 30px;
                 transition: all 0.3s ease;
             }
             .website-title:hover {
-                /* hover styling */
-                transform: scale(0.5.1);
+                transform: scale(1.1);
                 text-shadow: 0 0 10px yellow;
             }
+           
             
         </style>
+
+
     </head>
     <body>
         <header id="app">
             <h1 class="website-title">Timeless</h1>
+            <button id="About" class="nextPage">About us</button>
+            <script>
+                document.getElementById("About").addEventListener("click", function(){
+                    window.location.href = "page2.html";
+                });
+            </script>
             
         </header>
         <main>
@@ -59,16 +70,19 @@
                 </div>
               </div>
         </main>
-        <script>
-            const { createApp } = Vue
-            createApp({
-                data() {
-                    return {
-                    }
-                }
-            }).mount('#app')
-            </script>
-           
-           
+        <div id="timerDisplay" class="timerDisplay">
+            00 : 00 : 00 : 000
+        </div>
+         
+
+        <div class="buttons">
+            <button id="pauseTimer" class="buttons">Pause</button>
+            <button id="startTimer" class="buttons">Start</button>
+            <button id="resetTimer" class="buttons">Reset</button>
+            
+        </div>
+
+        <script src="vue.js"></script>
+
     </body>
 </html>

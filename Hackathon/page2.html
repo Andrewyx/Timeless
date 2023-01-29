@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="stylepage2.css">
+        <style>
+             body {
+                font-family: Arial, sans-serif;
+            }
+            /* Header Styles */
+            header {
+                background-color: #333;
+                color: rgb(255, 255, 255);
+                padding: 20px;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 50px;
+                text-shadow: 2px 2px 4px #ccc;
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+            /* Main Content Styles */
+            main {
+                margin: 20px;
+            }
+            /* Box Container Styles */
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            /* Individual Box Styles */
+            .box {
+                flex: 1;
+                margin: 10px;
+                background-color: white;
+                box-shadow: 0px 0px 20px #ccc;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+            }
+            /* Back Button Styles */
+            #Back {
+                background-color: #f5af19;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            #Back:hover {
+                background-color: #f12711;
+                box-shadow: 0px 0px 10px #f5af19;
+            }
+            /* Heading Styles */
+            h1, h2 {
+                text-align: center;
+                margin-top: 20px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+            /* Paragraph Styles */
+            p {
+                font-size: 20px;
+                text-align: center;
+                line-height: 1.5;
+                margin: 20px;
+            }
+            /* Image Styles */
+            img {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+            
+        </style>
+        
+
+        
+
+     
+
+
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Timeless</h1>
+            <button id="Back" class="Back">Back</button>
+            <script>
+                document.getElementById("Back").addEventListener("click", function(){
+                    window.location.href = "index.html";
+                });
+            </script>
+            
+
+        </header>
+        <div class="box">
+            <div class="box-header">
+                <h2>Meet the Team</h2>
+            </div>
+            <div class="box-body">
+                <div class="team-member">
+                    
+                    <h3>Andrew Mao</h3>
+                    
+                </div>
+                <div class="team-member">
+                    
+                    <h3>Tadjell Lyle</h3>
+                    
+                </div>
+                <div class="team-member">
+                    
+                    <h3>Alex</h3>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
