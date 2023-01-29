@@ -58,10 +58,8 @@ var score = 0;
                     alert("Time's up, you cannot increase the score anymore.");
                     if(score >= 150) {
                         alert("CONGRATS YOUR COOL");
-
                     } else {
                         alert("get gud you failed");
-                        
                     }
                     
                 } else {
@@ -70,3 +68,13 @@ var score = 0;
                 }
             }
 
+            window.onload = () => {
+                document.querySelectorAll("button.particleButton").forEach(btn => {
+                    let btnBg = btn.parentNode.querySelector(".particles")
+                    let initalListener = () => {
+                        btnBg.classList.add("animated")
+                        btn.removeEventListener("click", initalListener)
+                    }
+                    btn.addEventListener("click", initalListener)
+                })
+            }
